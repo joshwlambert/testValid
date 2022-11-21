@@ -8,6 +8,7 @@ data <- read.csv(
 )
 
 data_json <- jsonlite::toJSON(data, dataframe = "columns", na = "null")
+jsonlite::validate(data_json)
 
 schema <- yaml::read_yaml(
   system.file(
@@ -26,5 +27,6 @@ jsonvalidate::json_validate(
   engine = "ajv",
   verbose = TRUE,
   greedy = TRUE,
-  strict = TRUE
+  strict = TRUE,
+  error = TRUE
 )

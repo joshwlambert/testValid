@@ -28,9 +28,12 @@ jobs:
       - name: Validate packages.json
         run: |
           jsonvalidate::json_validate(
-            "inst/extdata/data.json",
-            "inst/extdata/schema.json",
+            json = jsonlite::read_json(path = "inst/extdata/data.json")[[1]],
+            schema = jsonlite::read_json(path = "inst/extdata/schema.json")[[1]],
             engine = "ajv",
+            verbose = TRUE,
+            greedy = TRUE,
+            strict = TRUE,
             error = TRUE
           )
         shell: Rscript {0}
