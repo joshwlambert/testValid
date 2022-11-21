@@ -1,1 +1,1 @@
-["{\"disease\":[\"ebola\",\"ebola\"],\"pathogen\":[\"ebolavirus\",\"ebolavirus\"],\"genus\":[\"ebolavirus\",\"ebolavirus\"],\"delay_type\":[\"serial_interval\",\"incubation\"],\"author\":[\"Smith\",\"Smith\"],\"year\":[2002,2005]}"]
+["{\"disease\":[\"ebola\",\"ebola\"],\"pathogen\":[\"ebolavirus\",\"ebolavirus\"],\"genus\":[\"ebolavirus\",\"ebolavirus\"],\"delay_type\":[\"serial_interval\",\"incubation\"],\"author\":[\"Smith\",\"Smith\"],\"year\":[2002,2005],\"mean_ci\":[[0.1,0.5],[0.9,2.1]]}"]

@@ -82,3 +82,4 @@ write.csv(
   file = "inst/extdata/test_database_extrafield.csv",
   row.names = FALSE
 )
+
