@@ -1,0 +1,49 @@
+---
+$schema: "http://json-schema.org/draft-07/schema#"
+title: epiparameter data
+description: >
+  The database of epidemiological delay distibutions for a variety of infectious
+  diseases and pathogens. Last modified 18/11/2022.
+type: object
+properties:
+  disease:
+    description: Disease defined by its symptoms.
+    examples: ["ebola", "measles"]
+    type: array
+    items:
+      type: ["string", "null"]
+  pathogen:
+    description: Pathogen defined by its virus or bacteria.
+    examples: ["SARS-CoV-2", "monkeypox virus"]
+    type: array
+    items:
+      type: string
+  genus:
+    description: The taxonomic genus classification of the pathogen.
+    examples: ["ebolavirus", "Morbillivirus"]
+    type: array
+    items:
+      type: string
+  delay_type:
+    description: The type of epidemiological delay distribution.
+    examples: ["incubation period", "serial interval"]
+    type: array
+    items:
+      type: string
+  author:
+    description: The surname of the first author.
+    examples: ["Smith", "Smith_Jones", "Smith_etal"]
+    type: array
+    items:
+      type: string
+  year:
+    description: The year of publication
+    examples: ["2019", "2020"]
+    type: array
+    items:
+      type: number
+required:
+  - pathogen
+  - year
+additionalProperties: false
+...

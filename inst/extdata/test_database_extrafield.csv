@@ -1,0 +1,3 @@
+"disease","pathogen","genus","delay_type","author","year","extrafield"
+"ebola","ebolavirus","ebolavirus","serial_interval","Smith","2002","hello"
+"ebola","ebolavirus","ebolavirus","incubation","Smith","2005","world"

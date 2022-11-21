@@ -1,0 +1,13 @@
+Package: testValid
+Type: Package
+Title: Testing validation using yaml, JSON and R
+Version: 0.1.0
+Author: Joshua W. Lambert
+Maintainer: Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>
+Description: Skeleton package to test the basics of data validation using 
+    tabular data and a schema originally written in yaml, using standard JSON
+    validation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
