@@ -9,6 +9,8 @@ data <- read.csv(
 
 data_json <- jsonlite::toJSON(data, dataframe = "columns", na = "null")
 
+jsonlite::write_json(data_json, path = "inst/extdata/data.json")
+
 schema <- yaml::read_yaml(
   system.file(
     "extdata",
@@ -20,11 +22,4 @@ schema <- yaml::read_yaml(
 schema_json <- jsonlite::toJSON(schema, auto_unbox = TRUE)
 jsonlite::validate(schema_json)
 
-jsonvalidate::json_validate(
-  json = data_json,
-  schema = schema_json,
-  engine = "ajv",
-  verbose = TRUE,
-  greedy = TRUE,
-  strict = TRUE
-)
+jsonlite::write_json(schema_json, path = "inst/extdata/schema.json")

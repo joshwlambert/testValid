@@ -11,13 +11,13 @@ properties:
     examples: ["ebola", "measles"]
     type: array
     items:
-      type: ["string", "null"]
+      type: string
   pathogen:
     description: Pathogen defined by its virus or bacteria.
     examples: ["SARS-CoV-2", "monkeypox virus"]
     type: array
     items:
-      type: string
+      type: ["string", "null"]
   genus:
     description: The taxonomic genus classification of the pathogen.
     examples: ["ebolavirus", "Morbillivirus"]
@@ -44,6 +44,6 @@ properties:
       type: number
 required:
   - pathogen
-  - year
+  - disease
 additionalProperties: false
 ...
