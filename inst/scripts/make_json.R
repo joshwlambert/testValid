@@ -8,9 +8,13 @@ data <- read.csv(
 )
 data$mean_ci <- lapply(strsplit(x = data$mean_ci, split = ","), as.numeric)
 
-data_json <- jsonlite::toJSON(data, dataframe = "columns", na = "null")
 
-jsonlite::write_json(data_json, path = "inst/extdata/data.json")
+jsonlite::write_json(
+  data,
+  path = "inst/extdata/data.json",
+  dataframe = "columns",
+  na = "null"
+)
 
 schema <- yaml::read_yaml(
   system.file(
@@ -20,7 +24,5 @@ schema <- yaml::read_yaml(
     mustWork = TRUE
   )
 )
-schema_json <- jsonlite::toJSON(schema, auto_unbox = TRUE)
-jsonlite::validate(schema_json)
 
-jsonlite::write_json(schema_json, path = "inst/extdata/schema.json")
+jsonlite::write_json(schema, path = "inst/extdata/schema.json", auto_unbox = TRUE)
