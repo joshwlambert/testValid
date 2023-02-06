@@ -8,7 +8,7 @@ on:
 
 jobs:
   validate-json:
-    runs-on: ubuntu-latest
+    runs-on: {os: ubuntu-latest,   r: 'oldrel-1'}
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
