@@ -13,7 +13,8 @@ jsonlite::write_json(
   data,
   path = "inst/extdata/data.json",
   dataframe = "columns",
-  na = "null"
+  na = "null",
+  pretty = TRUE
 )
 
 schema <- yaml::read_yaml(
@@ -25,4 +26,9 @@ schema <- yaml::read_yaml(
   )
 )
 
-jsonlite::write_json(schema, path = "inst/extdata/schema.json", auto_unbox = TRUE)
+jsonlite::write_json(
+  schema,
+  path = "inst/extdata/schema.json",
+  auto_unbox = TRUE,
+  pretty = TRUE
+)
